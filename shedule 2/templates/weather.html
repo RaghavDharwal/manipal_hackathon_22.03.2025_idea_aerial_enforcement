@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+ body {
+  font-size: 22px;
+  background-image: url("https://getwallpapers.com/wallpaper/full/9/d/e/567273.jpg");
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-family: "poppins", sans-serif;
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ruda:wght@400;600;700&display=swap");
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  background-color: #232931;
+  color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  grid-gap: 1rem;
+  position: absolute;
+  top:25%;
+  left:30%;
+}
+
+.img_section {
+  border-radius: 25px;
+  background-image: url("../img/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  transform: scale(1.03) perspective(200px);
+}
+
+.img_section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: -1;
+  border-radius: 25px;
+}
+
+.default_info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.default_info img {
+  width: 80%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.default_info h2 {
+  font-size: 3rem;
+}
+
+.default_info h3 {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+
+.weather_temp {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+/* content section */
+.content_section {
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.content_section form {
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.content_section form input {
+  width: 84%;
+  outline: none;  
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 0.7rem 1rem;
+  font-family: inherit;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.content_section form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 1rem 0.7rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  outline: none;
+  border: none;
+  background: #5c6bc0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.day_info .content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+}
+
+.day_info .content .title {
+  font-weight: 600;
+}
+
+.list_content ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin: 3rem 0rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.list_content ul li {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in;
+}
+
+.list_content ul li:hover {
+  transform: scale(1.1);
+  background-color: #fff;
+  color: #232931;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+
+.list_content ul li img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.icons {
+  opacity: 0;
+}
+
+.icons.fadeIn {
+  animation: 0.5s fadeIn forwards;
+  animation-delay: 0.7s;
+}
+
+@keyframes fadeIn {
+  to {
+    transition: all 0.5s ease-in;
+    opacity: 1;
+  }
+}
+
+
+
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* styles for header tag */
+header {
+  background-color: #727d87;
+  color: #000000;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+
+/* styles for aside tag */
+aside {
+  background-color: #213347;
+  padding: 15px;
+}
+
+aside ul {
+  list-style-type: none;
+}
+
+aside ul li a:link,
+aside ul li a:visited {
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  color: #ffffff;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+aside ul li a:hover {
+  background-color: #0a5a8f;
+}
+
+
+section.box {
+  padding: 10px;
+  margin: 10px;
+}
+
+
+  aside ul a {
+    width: auto;
+    float: left;
+  }
+
+  aside {
+    min-height: 80vh;
+    float: left;
+    width: 20%;
+  }
+
+  .loc
+  {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .image
+ {
+    height: 400px;
+    width: 800px;
+    position:absolute;
+    left: 35%;
+ }
+ 
+    </style>
+</head>
+<body>
+  <header>
+    <h2>Location and Drone</h2>
+  </header>
+
+  <aside>
+    <ul>
+      <li><a href="location1.html">Location</a></li>
+      <li><a href="weather.html">Weather</a></li>
+      <li><a href="golive.html">Go Live</a></li>
+      <li><a href="control.html">Drone Controls</a></li>
+      <li><a href="shedule.html"><span><i class="fa-solid fa-arrow-left"></i></span> Back</a></li>
+
+    </ul>
+  </aside>
+
+  <div class="container">
+    <div class="wrapper">
+      <div class="img_section">
+        <div class="default_info">
+          <h2 class="default_day">Sunday</h2>
+          <span class="default_date">18 September 2023 </span>
+          <div class="icons">
+            <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="" />
+            <h2 class="weather_temp">22°C</h2>
+            <h3 class="cloudtxt">Overcast Clouds</h3>
+          </div>
+        </div>
+      </div>
+      <div class="content_section">
+        <form>
+          <input
+            type="text"
+            placeholder="Search Location"
+            class="input_field"
+          />
+          <button type="submit" class="btn_search">Search</button>
+        </form>
+
+        <div class="day_info">
+          <div class="content">
+            <p class="title">NAME</p>
+            <span class="value">United Kingdom</span>
+          </div>
+          <div class="content">
+            <p class="title">TEMP</p>
+            <span class="value">23°C</span>
+          </div>
+          <div class="content">
+            <p class="title">HUMIDITY</p>
+            <span class="value">2%</span>
+          </div>
+          <div class="content">
+            <p class="title">WIND SPEED</p>
+            <span class="value">2.92 Km/h</span>
+          </div>
+        </div>
+
+        <div class="list_content">
+          <ul>
+            <li>
+              <img src="https://openweathermap.org/img/wn/10d@2x.png" />
+              <span>Sat</span>
+              <span class="day_temp">23°C</span>
+            </li>
+            <li>
+              <img src="https://openweathermap.org/img/wn/10d@2x.png" />
+              <span>Sat</span>
+              <span class="day_temp">23°C</span>
+            </li>
+            <li>
+              <img src="https://openweathermap.org/img/wn/10d@2x.png" />
+              <span>Sat</span>
+              <span class="day_temp">23°C</span>
+            </li>
+            <li>
+              <img src="https://openweathermap.org/img/wn/10d@2x.png" />
+              <span>Sat</span>
+              <span class="day_temp">23°C</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="weather.js"></script>
+</body>
+</html>

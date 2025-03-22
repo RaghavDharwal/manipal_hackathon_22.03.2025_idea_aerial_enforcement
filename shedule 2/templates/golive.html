@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Live</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  font-family: "poppins", sans-serif;
+  background-color: black;
+  font-size: 22px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ruda:wght@400;600;700&display=swap");
+
+
+/* styles for header tag */
+header {
+  background-color:#727d87;
+  color: black;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+
+/* styles for aside tag */
+aside {
+  background-color: #213347;
+  padding: 15px;
+}
+
+aside ul {
+  list-style-type: none;
+}
+
+aside ul li a:link,
+aside ul li a:visited {
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  color: #ffffff;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+aside ul li a:hover {
+  background-color: #0a5a8f;
+}
+
+
+section.box {
+  padding: 10px;
+  margin: 10px;
+}
+
+footer {
+  background-color: #413f3f;
+  color: #ffffff;
+  padding: 30px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+
+
+
+
+  aside ul a {
+    width: auto;
+    float: left;
+  }
+
+  aside {
+    min-height: 80vh;
+    float: left;
+    width: 20%;
+  }
+
+  .loc
+  {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .image
+ {
+    height: 400px;
+    width: 800px;
+    position:absolute;
+    left: 35%;
+ }
+
+
+  footer {
+    clear: left;
+  }
+  .drone-controls {
+            text-align: center;
+            position:absolute;
+            top: 650px;
+            left: 50%;
+            
+        }
+
+        .drone-controls button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background-color: #2e3b4e;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .drone-controls button:hover {
+            background-color: #1b283a;
+        }
+
+.extra
+{
+  color: white ;
+}
+
+    </style>
+</head>
+<body>
+  <header>
+    <h2>Location and Drone</h2>
+  </header>
+
+  <aside>
+    <ul>
+      <li><a href="location1.html">Location</a></li>
+      <li><a href="weather.html">Weather</a></li>
+      <li><a href="golive.html">Go Live</a></li>
+      <li><a href="control.html">Drone Controls</a></li>
+      <li><a href="shedule.html"><span><i class="fa-solid fa-arrow-left"></i></span> Back</a></li>
+
+    </ul>
+  </aside>
+
+  <main>
+   <div class="video-container">
+    <img  src="{{ url_for('video_feed') }}" alt="Video Stream" height="500px" width="80%"></img>
+   </div>
+  
+
+
+  </main>
+
+</body>
+
+</html>
+
+</body>
+</html>
+</body>
+</html>
